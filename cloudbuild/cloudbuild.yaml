@@ -10,16 +10,5 @@ steps:
       - --source=./cloudfunctions
       - --runtime=python38
       - --entry-point=get_date
+      - --service-account=rnd-cf@utility-unity-377912.iam.gserviceaccount.com
       - --allow-unauthenticated
-      - --memory=128MB
-      - --max-instances=10
-
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    args:
-      - gcloud
-      - functions
-      - add-iam-policy-binding
-      - get_date
-      - --region=us-central1
-      - --member=allUsers
-      - --role=roles/cloudfunctions.invoker
