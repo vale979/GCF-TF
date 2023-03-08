@@ -23,5 +23,5 @@ resource "google_cloudbuild_trigger" "cf_getdate" {
         }
     }
     //only include files in the list for the build
-    included_files = ["cloudfunctions/**"]
+    included_files = ["cloudfunctions/**", "cloudbuild/**"]
 }

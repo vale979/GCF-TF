@@ -11,3 +11,15 @@ steps:
       - --runtime=python38
       - --entry-point=get_date
       - --allow-unauthenticated
+      - --memory=128MB
+      - --max-instances=10
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+      - gcloud
+      - functions
+      - add-iam-policy-binding
+      - get_date
+      - --region=us-central1
+      - --member=allUsers
+      - --role=roles/cloudfunctions.invoker
