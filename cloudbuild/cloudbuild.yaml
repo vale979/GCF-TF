@@ -12,3 +12,4 @@ steps:
       - --entry-point=get_date
       - --service-account=rnd-cf@utility-unity-377912.iam.gserviceaccount.com
       - --allow-unauthenticated
+      - --max-instance=5
