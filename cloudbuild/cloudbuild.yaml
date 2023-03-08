@@ -10,3 +10,4 @@ steps:
       - --source=./cloudfunctions
       - --runtime=python38
       - --entry-point=get_date
+      - --allow-unauthenticated
