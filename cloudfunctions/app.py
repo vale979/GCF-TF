@@ -2,4 +2,5 @@ from datetime import date
 
 def get_date():
     today = date.today()
-    return today.strftime("%Y-%b-%d"), 200
+    date_str = today.strftime("%Y-%b-%d")
+    return f"Current date: {date_str}", 200
