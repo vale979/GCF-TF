@@ -1,7 +1,7 @@
 //Setting up cloud build trigger from Github repository
 resource "google_cloudbuild_trigger" "cf_getdate" {
     location = var.region
-    name     = "cf_get_date"
+    name     = "cf-get-date" //can only be alphanumeric and dash
     //cloud build config file
     filename = "cloudbuild/cloudbuild.yaml"
     github {
