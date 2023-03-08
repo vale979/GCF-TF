@@ -13,3 +13,13 @@ steps:
       - --service-account=rnd-cf@utility-unity-377912.iam.gserviceaccount.com
       - --allow-unauthenticated
       - --max-instances=5
+    
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+      - gcloud
+      - functions 
+      - add-iam-policy-binding
+      - get_date
+      - --region=us-central1
+      - --member=allUsers
+      - --role=roles/cloudfunctions.invoker
