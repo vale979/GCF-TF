@@ -1,0 +1,12 @@
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - get_date
+      - --region=us-central1
+      - --trigger-http
+      - --source ./cloudfunctions
+      - --runtime=python38
+      - --entry-point=get_date
