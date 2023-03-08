@@ -2,7 +2,7 @@
 resource "google_project_iam_member" "cloudbuild_iam" {
   project = var.project_number
   for_each = toset([
-    "roles/cloudfunctions.developer",
+    "roles/cloudfunctions.admin",
     "roles/iam.serviceAccountUser"
   ])
   role    = each.key
